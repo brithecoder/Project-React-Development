@@ -1,0 +1,56 @@
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  padding: 40px 10px;
+}
+
+.search-wrapper {
+  background-color: var(--el-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.search-wrapper input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 18px 25px;
+  color: var(--text-color);
+  width: 100%;
+}
+
+.region-select {
+  background-color: var(--el-color);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  padding: 18px 20px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Specific mobile adjustment */
+@media (max-width: 600px) {
+  .controls-container {
+   flex-wrap: wrap; /* Allow wrapping */
+    /* Alternatively, you can force them into a column: */
+    flex-direction: column; 
+    align-items: flex-start; /* Align search and filter to the left */
+    gap: 40px;
+  }
+  .search-wrapper, 
+  .region-select {
+    width: 100%; /* Make them full-width on mobile for easier tapping */
+    max-width: none;
+  }
+}
