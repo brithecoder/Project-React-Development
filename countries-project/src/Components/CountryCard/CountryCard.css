@@ -1,48 +1,47 @@
 .country-card {
-  background-color: var(--color-element);
-  border-radius: 5px;
-  overflow: hidden; /* Ensures the flag corners follow the border-radius */
-  box-shadow: var(--box-shadow);
+  background-color: var(--el-color); /* Uses your Theme Context color */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for Light Mode */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
+  height: 100%; /* Ensures all cards in a row are same height */
 }
 
+/* Dark Mode Shadow Adjustment */
+[data-theme='dark'] .country-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow for Dark Mode visibility */
+}
 .country-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px); /* Card lifts up */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-
 .card-image {
-  height: 160px; /* Fixed height for consistency in the grid */
   width: 100%;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* This prevents the flags from stretching */
+  aspect-ratio: 16 / 9; /* Keeps flags uniform */
+  object-fit: cover; /* Prevents stretching */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card-content {
-  padding: 24px 24px 40px 24px;
+  padding: 24px;
+  color: var(--text-color);
 }
 
-.country-name {
+.card-content h3 {
   margin-bottom: 16px;
   font-size: 1.1rem;
   font-weight: 800;
 }
 
-.country-stats {
-  list-style: none;
+.card-content p {
   font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-weight: 300;
 }
 
-.country-stats li {
-  margin-bottom: 8px;
-}
-
-.country-stats strong {
+.card-content strong {
   font-weight: 600;
 }
