@@ -1,6 +1,7 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { useCountries } from '../CustomHooks/CountryContext'; // Use your new hook
+import { useCountries } from '../../CustomHooks/CountryContext'; // Use your new hook
 import './CountryDetailPage.css';
+import NotFound from '../NotFound/NotFound';
 
 export default function CountryDetailPage() {
   const { countryCode } = useParams(); 
@@ -16,7 +17,9 @@ export default function CountryDetailPage() {
   if (loading) return <div className="loader">Loading countries...</div>;
   
   // 4. Handle if the code in the URL is invalid
-  if (!country) return <div className="error-msg">Country not found.</div>;
+if (!country) {
+  return <NotFound />;
+}
 
   return (
     <main className="detail-page">

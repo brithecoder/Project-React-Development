@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './NavBar'
-import HomePage from './HomePage';
-import NotFound from './NotFound';
-import CountryDetailPage from './CountryDetailPage';
+import NavBar from './NavBar/NavBar'
+import HomePage from './HomePage/HomePage';
+import NotFound from './NotFound/NotFound';
+import CountryDetailPage from './CoutryDetailPage/CountryDetailPage';
 
 export default function AppContainer() {
   return (

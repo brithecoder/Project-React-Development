@@ -1,0 +1,51 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Keeps it centered vertically without hitting the footer */
+  padding: 20px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.not-found-content {
+  max-width: 500px;
+}
+
+.not-found-icon {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.not-found-content h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.not-found-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.home-button {
+  background-color: var(--el-color);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 5px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.home-button:hover {
+  transform: scale(1.05);
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}

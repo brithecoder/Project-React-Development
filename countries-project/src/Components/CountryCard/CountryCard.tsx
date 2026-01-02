@@ -1,4 +1,4 @@
-import { type CountryCardProps } from '../Types';
+import { type CountryCardProps } from '../../Types';
 import { useNavigate } from 'react-router-dom';
 import './CountryCard.css';
 
