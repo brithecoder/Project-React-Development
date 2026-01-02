@@ -1,0 +1,76 @@
+.navbar {
+  height: 80px;
+  background-color: var(--color-element);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%; /* Responsive horizontal padding */
+}
+.logo-link {
+  text-decoration: none; /* Removes the underline */
+  color: inherit;        /* Uses the --text-color from the parent */
+  transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;          /* Gives a subtle hint that it's clickable */
+}
+
+.logo-link h1 {
+  font-size: 1.5rem;     /* Standard size for the logo header */
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* On mobile, shrink the text a bit */
+@media (max-width: 480px) {
+  .logo-link h1 {
+    font-size: 1.1rem;
+  }
+}
+.theme-toggle {
+  /* Remove default button styles */
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  
+  /* Typography */
+  color: var(--text-color);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Semi-bold look */
+  
+  /* Interaction */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.7;
+  transform: scale(1.05); /* Slight pop on hover */
+}
+
+.theme-toggle:active {
+  transform: scale(0.95); /* Tactile click feel */
+}
+
+.theme-toggle .icon {
+  font-size: 18px;
+  /* Some emojis look better with a slight rotation */
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+
+/* Hide text on very small mobile screens if needed */
+@media (max-width: 375px) {
+  .theme-toggle .text {
+    display: none;
+  }
+}
