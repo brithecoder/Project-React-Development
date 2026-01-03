@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5%; /* Responsive horizontal padding */
+  padding: 0 2%; /* Responsive horizontal padding */
   padding-top: 10px;
 }
 .logo-link {

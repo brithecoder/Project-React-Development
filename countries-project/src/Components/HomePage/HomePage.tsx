@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import "./HomePage.css";
 import CountryCard from '../CountryCard/CountryCard';
-import SearchBar from '../SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 import { useCountries } from '../../CustomHooks/CountryContext';
 
 export default function HomePage() {
