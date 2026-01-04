@@ -14,10 +14,10 @@ A responsive React application built with **TypeScript** and **Vite** that allow
    git clone https://github.com/brithecoder/Project-React-Development.git
 2. **Install dependencies:**
   ```bash
-    npm install
+  npm install
 3. **Start the development server:**
-  ```bash
-    npm run dev
+    ```bash
+ npm run dev
 
 **View in Browser:** The terminal will provide a local host port (usually http://localhost:5173) which you can paste into your browser.
 
