@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useTheme } from "../../CustomHooks/ThemeContext"
 import { Link } from 'react-router-dom';
 import './NavBar.css'
