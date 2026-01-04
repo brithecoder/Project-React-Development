@@ -1,25 +1,60 @@
-# Where In The World Project React + TypeScript 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. To run this application you want to CD into countries-project
-and run npm run dev in the terminal this will provide a local host port which you can paste into a browser and see the application. I used react router and a few custom hooks.My favorite part of this project was implementing the Country Context custom hook because it made my code feel alot cleaner.
+# Where In The World? (REST Countries API)
 
-## Overview
+A responsive React application built with **TypeScript** and **Vite** that allows users to explore data from the REST Countries API. This project was built to practice state management, custom hooks, and complex routing in a React environment.
 
-This project displays knowledge of HTML,CSS,and TypeScript/JavaScript and the React Library/framework I am also utilizing the REST Countries API.
+[**🚀 Click here to view the Live Site**](https://brithecoder.github.io/Project-React-Development/)
 
-## My Process 
- 
-My first thought was to get a few components displayed on the page So I started with a navbar and then a home page after that I worked on my router functionality and then I added a few custom hooks to handle toggling the theme and saving to local storage. Afterwards I worked on the country cards that would display on the home page and then I worked on calling the countries api with my usefetch custom hook. Everything was fine until I got to the details page for the countries and realized that I would have to repeat a bunch a code I had already written before. So to make my code more effecient and resuable I decided to build a Country Context Custom hook so I wouln't have to repeat code in my main components. After this I added css from the style guide. 
+---
 
-## MVP Goals 
+## 🚀 How to Run Locally
 
-Users should be able to:
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/brithecoder/Project-React-Development.git](https://github.com/brithecoder/Project-React-Development.git)
+**Install dependencies:**
+npm install
+**Start the development server:**
+npm run dev
 
-See all countries from the API on the homepage
-Search for a country using an input field
-Filter countries by region
-Click on a country to see more detailed information on a separate page
-Click through to the border countries on the detail page
-Toggle the color scheme between light and dark mode
+**View in Browser:** The terminal will provide a local host port (usually http://localhost:5173) which you can paste into your browser.
 
-##  Links 
+## 🛠️ Built With
+React (Functional Components)
+
+TypeScript for type safety
+
+Vite for fast bundling & HMR
+
+React Router (HashRouter) for GitHub Pages compatibility
+
+Custom Hooks & Context API for state management
+
+REST Countries API
+
+## 💡 My Process & Reflections
+**Overview**
+This project displays my knowledge of HTML, CSS, and TypeScript/JavaScript using the React library. My goal was to create a highly efficient application that minimizes code repetition.
+
+**The Development Journey**
+My first thought was to get the core components displayed, starting with the Navbar and the Home page. After setting up the basic UI, I worked on the routing functionality and added custom hooks to handle toggling the theme and saving preferences to localStorage.
+
+## Key Technical Decisions
+**Country Context Hook:** My favorite part of this project was implementing the CountryProvider. Originally, I realized I would have to repeat a lot of logic when I reached the Details page. By building a Context hook, I made the data accessible everywhere, making the code cleaner and more reusable.
+
+**The Routing Challenge:** A major challenge I faced was the router returning a 404 error when deployed. I solved this by switching to HashRouter, ensuring the application handles client-side routes correctly on GitHub Pages.
+
+## ✅ MVP Goals (Features)
+[x] Explore: See all countries from the API on the homepage.
+
+[x] Search: Search for a country using an input field.
+
+[x] Filter: Filter countries by region (Africa, Americas, Asia, etc.).
+
+[x] Detailed View: Click on a country to see detailed information on a separate page.
+
+[x] Border Navigation: Click through to the border countries directly from the detail page.
+
+[x] Dark Mode: Toggle the color scheme between light and dark mode.
+
+![ScreenShot of application](./Screenshot.png)
