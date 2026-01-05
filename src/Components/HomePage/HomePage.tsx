@@ -6,7 +6,6 @@ import { useCountries } from '../../CustomHooks/CountryContext';
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
-
   const [regionFilter, setRegionFilter] = useState('');
 const { countries, loading, error } = useCountries();
 

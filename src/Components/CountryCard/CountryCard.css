@@ -6,6 +6,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
+  padding: 0;
   flex-direction: column;
   height: 100%; /* Ensures all cards in a row are same height */
 }
@@ -20,9 +21,19 @@
 }
 .card-image {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Keeps flags uniform */
-  object-fit: cover; /* Prevents stretching */
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: block;
+  height: 160px;
+}
+.card-image img {
+  width: 100%;      /* Forces it to go edge-to-edge */
+  height: 100%;     /* Fills the height of the wrapper */
+  object-fit: cover; /* Prevents the flag from looking squashed */
+  object-position: center; 
+  display: block;
 }
 
 .card-content {
@@ -42,6 +53,22 @@
   font-weight: 300;
 }
 
-.card-content strong {
+.card-content strong { 
   font-weight: 600;
+}
+
+/* For Desktop/Tablet */
+@media (min-width: 768px) {
+  .card-image {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* For Mobile */
+@media (max-width: 767px) {
+  .card-image {
+    /* Instead of a ratio, give it a fixed height so it doesn't 
+       get squashed or stretched too thin on small screens */
+    height: 200px; 
+  }
 }
